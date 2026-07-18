@@ -19,3 +19,17 @@
 /* IBM Plex Mono - monospace for code blocks and inline code. */
 /* https://fonts.google.com/specimen/IBM+Plex+Mono */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+/* -------------------------------------------------------------------------
+   Accent color.
+
+   Teal, replacing Obsidian's default purple app-wide. Links, tags, menus
+   and buttons all derive from these three base variables.
+   ------------------------------------------------------------------------- */
+
+body.theme-light,
+body.theme-dark {
+  --accent-h: 191;
+  --accent-s: 38%;
+  --accent-l: 39%;
+}
