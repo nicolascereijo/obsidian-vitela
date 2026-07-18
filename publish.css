@@ -1,0 +1,26 @@
+/* =========================================================================
+   obsidian-vitela - Obsidian Publish edition.
+
+   Same theme as theme.css, trimmed to the selectors that apply to a
+   published site (no editor / Live Preview, since published pages are
+   read-only rendered HTML).
+
+   Usage: copy this file to the root of the vault that Obsidian Publish
+   serves, as 'publish.css'. Obsidian Publish picks it up automatically.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   Fonts.
+   ------------------------------------------------------------------------- */
+
+/* Lora - body text serif, optimized for screen reading. */
+/* https://fonts.google.com/specimen/Lora */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+/* EB Garamond - low-contrast classic serif, sets quotes apart from body text. */
+/* https://fonts.google.com/specimen/EB+Garamond */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+
+/* IBM Plex Mono - monospace for code blocks and inline code. */
+/* https://fonts.google.com/specimen/IBM+Plex+Mono */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
