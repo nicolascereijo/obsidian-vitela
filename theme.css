@@ -48,3 +48,10 @@ body.theme-dark {
   line-height: 1.75;
   text-align: justify;
 }
+
+.markdown-source-view.mod-cm6 .HyperMD-quote,
+.markdown-preview-view blockquote {
+  font-family: "EB Garamond", serif;
+  font-size: 1.15em;
+  line-height: 1.6;
+}
