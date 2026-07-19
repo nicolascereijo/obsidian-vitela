@@ -33,3 +33,18 @@ body.theme-dark {
   --accent-s: 38%;
   --accent-l: 39%;
 }
+
+/* -------------------------------------------------------------------------
+   Typography.
+
+   Each rule pairs the Live Preview / source-mode selector with its
+   Reading View equivalent, so the two views stay visually consistent.
+   ------------------------------------------------------------------------- */
+
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock),
+.markdown-preview-view {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  line-height: 1.75;
+  text-align: justify;
+}

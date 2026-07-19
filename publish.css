@@ -38,3 +38,14 @@ body.theme-dark {
   --accent-s: 38%;
   --accent-l: 39%;
 }
+
+/* -------------------------------------------------------------------------
+   Typography.
+   ------------------------------------------------------------------------- */
+
+.markdown-preview-view {
+  font-family: "Lora", serif;
+  font-size: 18px;
+  line-height: 1.75;
+  text-align: justify;
+}
