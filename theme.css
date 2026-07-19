@@ -62,3 +62,35 @@ body.theme-dark {
   font-family: "IBM Plex Mono", monospace;
   text-align: left;
 }
+
+/* -------------------------------------------------------------------------
+   Tables.
+
+   Subtle accent tint instead of Obsidian's plain grey borders.
+   '.markdown-rendered' covers both Reading View and Live Preview's rendered
+   table widget. '.markdown-preview-view' is kept for older Obsidian versions.
+   ------------------------------------------------------------------------- */
+
+.markdown-preview-view table,
+.markdown-rendered table {
+  border-collapse: collapse;
+}
+
+.markdown-preview-view th,
+.markdown-preview-view td,
+.markdown-rendered th,
+.markdown-rendered td {
+  /* Solid fallback for browsers without 'color-mix()' support, overridden below. */
+  border: 1px solid var(--background-modifier-border);
+  border: 1px solid color-mix(in srgb, var(--interactive-accent) 25%, var(--background-modifier-border));
+}
+
+.markdown-preview-view th,
+.markdown-rendered th {
+  background: color-mix(in srgb, var(--interactive-accent) 12%, transparent);
+}
+
+.markdown-preview-view tbody tr:nth-child(even),
+.markdown-rendered tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--interactive-accent) 5%, transparent);
+}
