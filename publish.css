@@ -55,3 +55,9 @@ body.theme-dark {
   font-size: 1.15em;
   line-height: 1.6;
 }
+
+.markdown-preview-view pre,
+.markdown-preview-view code {
+  font-family: "IBM Plex Mono", monospace;
+  text-align: left;
+}
