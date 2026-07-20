@@ -6,3 +6,6 @@ A minimal serif theme for long-form reading and writing in Obsidian.
 - **EB Garamond** for blockquotes.
 - **IBM Plex Mono** for code.
 - A teal accent color, replacing Obsidian's default purple.
+
+![Dark mode](screenshots/dark.png)
+![Light mode](screenshots/light.png)
