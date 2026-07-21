@@ -32,3 +32,7 @@ Nicolás Cereijo Ranchal.
 
 - [Welcome page](https://publish.obsidian.md/nicolascereijo/welcome) (English)
 - [Página de bienvenida](https://publish.obsidian.md/nicolascereijo/bienvenida) (Spanish)
+
+## License
+
+MIT, see [LICENSE](LICENSE).
