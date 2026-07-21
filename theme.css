@@ -116,9 +116,12 @@ body.theme-dark {
 .markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock),
 .markdown-preview-view {
   font-family: "Lora", serif;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 1.75;
   text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-quote,
@@ -126,6 +129,9 @@ body.theme-dark {
   font-family: "EB Garamond", serif;
   font-size: 1.15em;
   line-height: 1.6;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock,
@@ -133,11 +139,17 @@ body.theme-dark {
 .markdown-preview-view code {
   font-family: "IBM Plex Mono", monospace;
   text-align: left;
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  hyphens: manual;
 }
 
 .markdown-source-view.mod-cm6 .HyperMD-header,
 .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
   text-align: left;
+  -webkit-hyphens: manual;
+  -moz-hyphens: manual;
+  hyphens: manual;
 }
 
 /* Left-align the hashtag line inside metadata callouts, without touching
