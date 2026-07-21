@@ -1,8 +1,8 @@
-/* =========================================================================
-   obsidian-vitela.
-
-   A minimal serif theme for long-form reading and writing.
-   ========================================================================= */
+/* ┌───────────────────────────────────────────────────────────────────────┐
+   │ obsidian-vitela                                                       │
+   │                                                                       │
+   │ A minimal serif theme for long-form reading and writing.              │
+   └───────────────────────────────────────────────────────────────────────┘ */
 
 /* │
    │ Fonts.
@@ -68,7 +68,9 @@ body.theme-dark {
 }
 
 /* Left-align the hashtag line inside metadata callouts, without touching
-   other lines in the same box. */
+   other lines in the same box. No CM6 pairing needed here, unlike the rules
+   above. Obsidian renders callouts as the same DOM in Live Preview and
+   Reading View, so a single selector already covers both. */
 .callout-content p:has(.tag) {
   text-align: left;
 }

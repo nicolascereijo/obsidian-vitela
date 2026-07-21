@@ -1,8 +1,8 @@
 {
   "name": "obsidian-vitela",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.4.0",
   "author": "Nicolás Cereijo Ranchal",
   "authorUrl": "https://publish.obsidian.md/nicolascereijo/welcome",
-  "description": "A minimal serif theme for long-form reading and writing. Lora for body text, EB Garamond for blockquotes, IBM Plex Mono for code, with a teal accent."
+  "description": "A minimal serif theme for long-form reading and writing. Lora for body text, EB Garamond for blockquotes, IBM Plex Mono for code, a teal accent, justified body text and accent-tinted tables."
 }
