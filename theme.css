@@ -155,7 +155,12 @@ body.theme-dark {
 /* Left-align the hashtag line inside metadata callouts, without touching
    other lines in the same box. No CM6 pairing needed here, unlike the rules
    above. Obsidian renders callouts as the same DOM in Live Preview and
-   Reading View, so a single selector already covers both. */
+   Reading View, so a single selector already covers both.
+   Requires 'has()', a newer CSS selector some older browsers don't
+   support. Unlike 'color-mix()' above, a selector has no plain-value
+   fallback. In an unsupported browser this whole rule is skipped, so the
+   line just stays justified like the rest of the callout, a minor visual
+   miss, not a broken layout. */
 .callout-content p:has(.tag) {
   text-align: left;
 }
@@ -184,10 +189,14 @@ body.theme-dark {
 
 .markdown-preview-view th,
 .markdown-rendered th {
+  /* Solid fallback for browsers without 'color-mix()' support, overridden below. */
+  background: var(--background-modifier-hover);
   background: color-mix(in srgb, var(--interactive-accent) 12%, transparent);
 }
 
 .markdown-preview-view tbody tr:nth-child(even),
 .markdown-rendered tbody tr:nth-child(even) {
+  /* Solid fallback for browsers without 'color-mix()' support, overridden below. */
+  background: var(--background-secondary);
   background: color-mix(in srgb, var(--interactive-accent) 5%, transparent);
 }
