@@ -1,0 +1,6 @@
+# The embedded base64 fonts push average line length past GitHub Linguist's
+# minified-file threshold, so it stops counting these as CSS in the repo's
+# language stats. They're the real theme, not build output, so keep them
+# counted.
+theme.css linguist-generated=false
+publish.css linguist-generated=false
