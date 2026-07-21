@@ -67,6 +67,12 @@ body.theme-dark {
   text-align: right;
 }
 
+/* Right-align the hashtag line inside metadata callouts, without touching
+   other lines in the same box. */
+.callout-content p:has(.tag) {
+  text-align: right;
+}
+
 /* │
    │ Tables.
    └───────────────────────────────────────────────────────────────────────
