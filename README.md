@@ -17,3 +17,11 @@ A minimal serif theme for long-form reading and writing in Obsidian.
    name doesn't matter, Obsidian reads `manifest.json` from every subfolder.
 3. In Obsidian, go to **Settings → Appearance → Themes**, and select
    **obsidian-vitela**.
+
+## Use with Obsidian Publish
+
+Obsidian Publish does not read a vault's local theme files. To apply this
+theme to a published site, copy `publish.css` (a trimmed version of
+`theme.css`, without editor-only rules that don't apply to published pages)
+to the root of the vault being published, renamed to `publish.css`. Obsidian
+Publish detects and applies it automatically.
