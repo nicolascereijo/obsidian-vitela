@@ -1,0 +1,21 @@
+name: Check generated files
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate theme.css and publish.css
+        run: ./scripts/build.sh
+
+      - name: Fail if regenerating changed anything
+        run: |
+          if ! git diff --exit-code; then
+            echo "::error::theme.css or publish.css are out of sync with fonts/, or with each other. Run ./scripts/build.sh locally and commit the result."
+            exit 1
+          fi
