@@ -25,3 +25,10 @@ theme to a published site, copy `publish.css` (a trimmed version of
 `theme.css`, without editor-only rules that don't apply to published pages)
 to the root of the vault being published, renamed to `publish.css`. Obsidian
 Publish detects and applies it automatically.
+
+## Author
+
+Nicolás Cereijo Ranchal.
+
+- [Welcome page](https://publish.obsidian.md/nicolascereijo/welcome) (English)
+- [Página de bienvenida](https://publish.obsidian.md/nicolascereijo/bienvenida) (Spanish)
