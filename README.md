@@ -31,18 +31,27 @@ published. Obsidian Publish detects and applies it automatically.
 Lora, EB Garamond and IBM Plex Mono are **self-hosted** from `fonts/` (latin
 subset only, which covers Spanish, English and most other Latin-script
 languages) instead of imported from Google Fonts, **to avoid leaking visitor
-IPs and a render-blocking external request**. Both `theme.css` and
-`publish.css` embed them as base64, Obsidian blocks network requests from
-theme CSS, and Obsidian Publish's media pipeline only accepts images, video,
-audio and PDF as standalone assets, not font files, so a plain file `url()`
-doesn't work reliably in either case. `publish.css` is published as-is
-regardless, so inlining the fonts there sidesteps that limitation, no
-separate file to upload. After adding, removing or replacing a file in
-`fonts/`, regenerate both embedded blocks with:
+IPs and a render-blocking external request**. They're embedded as base64,
+Obsidian blocks network requests from theme CSS, and Obsidian Publish's
+media pipeline only accepts images, video, audio and PDF as standalone
+assets, not font files, so a plain file `url()` doesn't work reliably in
+either case.
+
+## Development
+
+`theme.css` is the only file meant to be hand-edited. `publish.css` is
+generated from it (same rules, minus the editor-only half of each
+selector, since a published page has no Live Preview), so the two can't
+drift out of sync by hand. Run this after touching `theme.css` or a file
+in `fonts/`:
 
 ```sh
-./scripts/build-fonts.sh
+./scripts/build.sh
 ```
+
+It regenerates the embedded font block in `theme.css` first, then
+regenerates `publish.css` from it. The two steps also run separately as
+`scripts/build-fonts.sh` and `scripts/build-publish-css.sh`.
 
 ## Author
 

@@ -9,7 +9,7 @@
    └───────────────────────────────────────────────────────────────────────
    │ Self-hosted from fonts/ (latin subset only, which covers Spanish,
      English and most other Latin-script languages) instead of importing
-     from Google Fonts: avoids leaking visitor IPs to Google and a
+     from Google Fonts. Avoids leaking visitor IPs to Google and a
      render-blocking external request.
      Embedded as base64 because Obsidian blocks network requests from theme
      CSS, so a plain file url() doesn't load reliably in the desktop or
