@@ -65,4 +65,7 @@ Nicolás Cereijo Ranchal.
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+The theme itself is MIT, see [LICENSE](LICENSE). The fonts bundled in
+`fonts/` are separately licensed under the SIL Open Font License 1.1 by
+their respective authors, see `fonts/LICENSE-lora.txt`,
+`fonts/LICENSE-eb-garamond.txt` and `fonts/LICENSE-ibm-plex-mono.txt`.
