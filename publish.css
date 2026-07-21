@@ -64,13 +64,13 @@ body.theme-dark {
 }
 
 .markdown-preview-view :is(h1, h2, h3, h4, h5, h6) {
-  text-align: right;
+  text-align: left;
 }
 
-/* Right-align the hashtag line inside metadata callouts, without touching
+/* Left-align the hashtag line inside metadata callouts, without touching
    other lines in the same box. */
 .callout-content p:has(.tag) {
-  text-align: right;
+  text-align: left;
 }
 
 /* │
