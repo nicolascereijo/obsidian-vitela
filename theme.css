@@ -98,13 +98,21 @@
    │ Accent color.
    └───────────────────────────────────────────────────────────────────────
    │ Teal, replacing Obsidian's default purple app-wide. Links, tags, menus
-     and buttons all derive from these three base variables. */
+     and buttons all derive from these three base variables.
+     Lightness differs by mode on purpose. The same value reads fine on a
+     white background but falls short of WCAG AA (4.5:1) against a dark
+     one, so dark mode gets a higher '--accent-l' to compensate. */
 
-body.theme-light,
-body.theme-dark {
+body.theme-light {
   --accent-h: 191;
   --accent-s: 38%;
   --accent-l: 39%;
+}
+
+body.theme-dark {
+  --accent-h: 191;
+  --accent-s: 38%;
+  --accent-l: 47%;
 }
 
 /* │
