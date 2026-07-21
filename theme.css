@@ -4,9 +4,10 @@
    A minimal serif theme for long-form reading and writing.
    ========================================================================= */
 
-/* -------------------------------------------------------------------------
-   Fonts.
-   ------------------------------------------------------------------------- */
+/* │
+   │ Fonts.
+   └───────────────────────────────────────────────────────────────────────
+   │ */
 
 /* Lora - body text serif, optimized for screen reading. */
 /* https://fonts.google.com/specimen/Lora */
@@ -20,12 +21,11 @@
 /* https://fonts.google.com/specimen/IBM+Plex+Mono */
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
 
-/* -------------------------------------------------------------------------
-   Accent color.
-
-   Teal, replacing Obsidian's default purple app-wide. Links, tags, menus
-   and buttons all derive from these three base variables.
-   ------------------------------------------------------------------------- */
+/* │
+   │ Accent color.
+   └───────────────────────────────────────────────────────────────────────
+   │ Teal, replacing Obsidian's default purple app-wide. Links, tags, menus
+     and buttons all derive from these three base variables. */
 
 body.theme-light,
 body.theme-dark {
@@ -34,12 +34,11 @@ body.theme-dark {
   --accent-l: 39%;
 }
 
-/* -------------------------------------------------------------------------
-   Typography.
-
-   Each rule pairs the Live Preview / source-mode selector with its
-   Reading View equivalent, so the two views stay visually consistent.
-   ------------------------------------------------------------------------- */
+/* │
+   │ Typography.
+   └───────────────────────────────────────────────────────────────────────
+   │ Each rule pairs the Live Preview / source-mode selector with its
+     Reading View equivalent, so the two views stay visually consistent. */
 
 .markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-codeblock),
 .markdown-preview-view {
@@ -63,13 +62,13 @@ body.theme-dark {
   text-align: left;
 }
 
-/* -------------------------------------------------------------------------
-   Tables.
-
-   Subtle accent tint instead of Obsidian's plain grey borders.
-   '.markdown-rendered' covers both Reading View and Live Preview's rendered
-   table widget. '.markdown-preview-view' is kept for older Obsidian versions.
-   ------------------------------------------------------------------------- */
+/* │
+   │ Tables.
+   └───────────────────────────────────────────────────────────────────────
+   │ Subtle accent tint instead of Obsidian's plain grey borders.
+     '.markdown-rendered' covers both Reading View and Live Preview's
+     rendered table widget. '.markdown-preview-view' is kept for older
+     Obsidian versions. */
 
 .markdown-preview-view table,
 .markdown-rendered table {
