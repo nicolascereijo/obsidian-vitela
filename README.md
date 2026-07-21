@@ -23,10 +23,26 @@ A minimal serif theme for long-form reading and writing in Obsidian.
 ## Use with Obsidian Publish
 
 Obsidian Publish does not read a vault's local theme files. To apply this
-theme to a published site, copy `publish.css` (a trimmed version of
-`theme.css`, without editor-only rules that don't apply to published pages)
-to the root of the vault being published, renamed to `publish.css`. Obsidian
-Publish detects and applies it automatically.
+theme to a published site, copy `publish.css` to the root of the vault being
+published. Obsidian Publish detects and applies it automatically.
+
+## Fonts
+
+Lora, EB Garamond and IBM Plex Mono are **self-hosted** from `fonts/` (latin
+subset only, which covers Spanish, English and most other Latin-script
+languages) instead of imported from Google Fonts, **to avoid leaking visitor
+IPs and a render-blocking external request**. Both `theme.css` and
+`publish.css` embed them as base64, Obsidian blocks network requests from
+theme CSS, and Obsidian Publish's media pipeline only accepts images, video,
+audio and PDF as standalone assets, not font files, so a plain file `url()`
+doesn't work reliably in either case. `publish.css` is published as-is
+regardless, so inlining the fonts there sidesteps that limitation, no
+separate file to upload. After adding, removing or replacing a file in
+`fonts/`, regenerate both embedded blocks with:
+
+```sh
+./scripts/build-fonts.sh
+```
 
 ## Author
 
