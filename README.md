@@ -2,10 +2,12 @@
 
 A minimal serif theme for long-form reading and writing in Obsidian.
 
-- **Lora** for body text.
-- **EB Garamond** for blockquotes.
-- **IBM Plex Mono** for code.
+- **[Lora](https://fonts.google.com/specimen/Lora)** for body text, a serif optimized for screen reading.
+- **[EB Garamond](https://fonts.google.com/specimen/EB+Garamond)** for blockquotes, a low-contrast classic serif that sets quotes apart from body text.
+- **[IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono)** for code blocks and inline code, a monospace typeface.
 - A teal accent color, replacing Obsidian's default purple.
+- Justified body text, for a cleaner block shape in long-form reading.
+- Tables with accent-tinted borders and row striping, instead of plain grey.
 
 ![Dark mode](screenshots/dark.png)
 ![Light mode](screenshots/light.png)
