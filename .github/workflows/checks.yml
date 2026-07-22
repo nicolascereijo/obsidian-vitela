@@ -27,3 +27,11 @@ jobs:
 
       - name: Validate manifest.json
         run: ./scripts/validate-manifest.py
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Shellcheck scripts
+        run: shellcheck scripts/*.sh
