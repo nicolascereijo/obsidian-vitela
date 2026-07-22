@@ -4,3 +4,6 @@
 # counted.
 theme.css linguist-generated=false
 publish.css linguist-generated=false
+
+# Explicit instead of relying on git's content-based autodetection.
+*.woff2 binary
