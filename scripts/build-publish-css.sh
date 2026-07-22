@@ -13,7 +13,16 @@ cd "$(dirname "$0")/.."
 
 SOURCE_CSS="theme.css"
 TARGET_CSS="publish.css"
-BANNER_LINES=5
+
+# theme.css must open with the banner comment as its very first line. This
+# finds the first line ending in '*/' to know where that comment closes,
+# instead of a hardcoded line count silently drifting out of sync with the
+# actual comment.
+banner_end_line="$(grep -n -m1 '\*/ *$' "$SOURCE_CSS" | cut -d: -f1)" || true
+if [[ -z "$banner_end_line" ]]; then
+  echo "error: could not find the closing '*/' of the banner comment at the top of $SOURCE_CSS" >&2
+  exit 1
+fi
 
 banner="$(mktemp)"
 trap 'rm -f "$banner"' EXIT
@@ -33,7 +42,7 @@ EOF
 
 {
   cat "$banner"
-  tail -n "+$((BANNER_LINES + 1))" "$SOURCE_CSS" | grep -v '\.markdown-source-view\.mod-cm6'
+  tail -n "+$((banner_end_line + 1))" "$SOURCE_CSS" | grep -v '\.markdown-source-view\.mod-cm6'
 } >"$TARGET_CSS.tmp"
 mv "$TARGET_CSS.tmp" "$TARGET_CSS"
 
