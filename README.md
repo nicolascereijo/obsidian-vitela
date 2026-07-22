@@ -56,6 +56,8 @@ It regenerates the embedded font block in `theme.css` first, then
 regenerates `publish.css` from it. The two steps also run separately as
 `scripts/build-fonts.sh` and `scripts/build-publish-css.sh`.
 
+See [CHANGELOG.md](CHANGELOG.md) for the version history.
+
 ## Author
 
 Nicolás Cereijo Ranchal.
