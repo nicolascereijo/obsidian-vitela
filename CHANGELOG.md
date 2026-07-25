@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.4] - 2026-07-25
+
+- Table border and background `color-mix()` refinements moved into an
+  `@supports` block instead of a second same-property declaration in the
+  same rule, avoiding a false-positive "duplicate property" flag from
+  automated scans while keeping the same solid-color fallback behavior.
+- Replaced the `:has()`-based hashtag alignment rule, flagged by
+  automated scans for its performance cost, with a plain attribute
+  selector that left-aligns all text inside `[!note]` callouts instead
+  of only lines containing a tag.
+
 ## [1.1.3] - 2026-07-25
 
 - Fixed `authorUrl` in `manifest.json` pointing to an Obsidian-owned
@@ -80,7 +91,9 @@ Initial release.
   documentation.
 - Theme screenshots.
 
-[Unreleased]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.2...HEAD
+[Unreleased]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.4...HEAD
+[1.1.4]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.3...v1.1.4
+[1.1.3]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.2...v1.1.3
 [1.1.2]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.0.2...v1.1.0

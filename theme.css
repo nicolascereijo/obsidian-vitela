@@ -160,16 +160,12 @@ body.theme-dark {
   hyphens: manual;
 }
 
-/* Left-align the hashtag line inside metadata callouts, without touching
-   other lines in the same box. No CM6 pairing needed here, unlike the rules
-   above. Obsidian renders callouts as the same DOM in Live Preview and
-   Reading View, so a single selector already covers both.
-   Requires 'has()', a newer CSS selector some older browsers don't
-   support. Unlike 'color-mix()' above, a selector has no plain-value
-   fallback. In an unsupported browser this whole rule is skipped, so the
-   line just stays justified like the rest of the callout, a minor visual
-   miss, not a broken layout. */
-.callout-content p:has(.tag) {
+/* Note callouts hold short annotations rather than flowing prose, so keep
+   them left-aligned instead of justified like the rest of the text. No CM6
+   pairing needed here, unlike the rules above. Obsidian renders callouts as
+   the same DOM in Live Preview and Reading View, so a single selector
+   already covers both. */
+.callout[data-callout="note"] .callout-content p {
   text-align: left;
 }
 
@@ -190,21 +186,36 @@ body.theme-dark {
 .markdown-preview-view td,
 .markdown-rendered th,
 .markdown-rendered td {
-  /* Solid fallback for browsers without 'color-mix()' support, overridden below. */
   border: 1px solid var(--background-modifier-border);
-  border: 1px solid color-mix(in srgb, var(--interactive-accent) 25%, var(--background-modifier-border));
 }
 
 .markdown-preview-view th,
 .markdown-rendered th {
-  /* Solid fallback for browsers without 'color-mix()' support, overridden below. */
   background: var(--background-modifier-hover);
-  background: color-mix(in srgb, var(--interactive-accent) 12%, transparent);
 }
 
 .markdown-preview-view tbody tr:nth-child(even),
 .markdown-rendered tbody tr:nth-child(even) {
-  /* Solid fallback for browsers without 'color-mix()' support, overridden below. */
   background: var(--background-secondary);
-  background: color-mix(in srgb, var(--interactive-accent) 5%, transparent);
+}
+
+/* Accent-tinted borders and backgrounds for browsers that support
+   'color-mix()'. Browsers that don't keep the plain colors set above. */
+@supports (background: color-mix(in srgb, red 50%, blue)) {
+  .markdown-preview-view th,
+  .markdown-preview-view td,
+  .markdown-rendered th,
+  .markdown-rendered td {
+    border: 1px solid color-mix(in srgb, var(--interactive-accent) 25%, var(--background-modifier-border));
+  }
+
+  .markdown-preview-view th,
+  .markdown-rendered th {
+    background: color-mix(in srgb, var(--interactive-accent) 12%, transparent);
+  }
+
+  .markdown-preview-view tbody tr:nth-child(even),
+  .markdown-rendered tbody tr:nth-child(even) {
+    background: color-mix(in srgb, var(--interactive-accent) 5%, transparent);
+  }
 }
