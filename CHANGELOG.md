@@ -7,11 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-- Renamed the CI workflow file to `checks.yml` and marked `*.woff2` as
-  binary in `.gitattributes`.
-
 ## [1.1.2] - 2026-07-22
 
+- Renamed the theme's display name from `obsidian-vitela` to `Vitela`
+  in `manifest.json`.
+- Renamed the CI workflow file to `checks.yml` and marked `*.woff2` as
+  binary in `.gitattributes`.
 - Table cells and header backgrounds now fall back to a solid color on
   browsers without `color-mix()` support, documented alongside the
   existing border fallback.
