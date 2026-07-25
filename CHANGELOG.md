@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.5] - 2026-07-25
+
+- Simplified the README installation instructions to the marketplace
+  method only, since manual installation requires the theme folder to
+  be renamed to match `manifest.json`'s `name` field exactly, which the
+  previous instructions didn't mention.
+- The Obsidian Publish instructions now link directly to `publish.css`
+  from the latest GitHub release instead of assuming the reader has
+  cloned the repository.
+
 ## [1.1.4] - 2026-07-25
 
 - Table border and background `color-mix()` refinements moved into an
@@ -91,10 +101,11 @@ Initial release.
   documentation.
 - Theme screenshots.
 
-[Unreleased]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.4...HEAD
-[1.1.4]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.3...v1.1.4
-[1.1.3]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.2...v1.1.3
-[1.1.2]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.1...v1.1.2
+[Unreleased]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.5...HEAD
+[1.1.5]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.4...1.1.5
+[1.1.4]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.3...1.1.4
+[1.1.3]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.2...1.1.3
+[1.1.2]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.1...1.1.2
 [1.1.1]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.0.2...v1.1.0
 [1.0.2]: https://github.com/nicolascereijo/obsidian-vitela/compare/v1.0.1...v1.0.2
