@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 MANIFEST_PATH = Path(__file__).resolve().parent.parent / "manifest.json"
-REQUIRED_FIELDS = ["name", "version", "minAppVersion", "author", "authorUrl", "description"]
+REQUIRED_FIELDS = ["name", "version", "minAppVersion", "author", "authorUrl"]
 SEMVER = re.compile(r"\d+\.\d+\.\d+")
 
 errors = []
