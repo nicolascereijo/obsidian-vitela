@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.6] - 2026-07-25
+
+- Updated `screenshots/hero.png` to the final cover image.
+
 ## [1.1.5] - 2026-07-25
 
 - Simplified the README installation instructions to the marketplace
@@ -101,7 +105,8 @@ Initial release.
   documentation.
 - Theme screenshots.
 
-[Unreleased]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.5...HEAD
+[Unreleased]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.6...HEAD
+[1.1.6]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.4...1.1.5
 [1.1.4]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.3...1.1.4
 [1.1.3]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.2...1.1.3
