@@ -88,7 +88,7 @@ The individual steps are also available separately:
 
 ```python
 File                          Purpose
-────────────────────────────  ─────────────────────────────────────────
+──────────────  ─────────────────────
 theme.css                     Main stylesheet (source of truth)
 publish.css                   Generated stylesheet for Obsidian Publish
 fonts/                        Bundled font files
