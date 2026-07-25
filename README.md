@@ -37,9 +37,17 @@ Rather than exposing countless configuration options, Vitela focuses on providin
 
 ## Installation
 
+### From within Obsidian
+
+1. Open **Settings -> Appearance -> Themes -> Browse**.
+2. Search for **Vitela**.
+3. Select it to install and activate it.
+
+### Manual installation
+
 1. Download or clone this repository.
-2. Copy the folder into `<vault>/.obsidian/themes/`. The containing folder name does not matter; Obsidian discovers themes by locating `manifest.json` files.
-3. Open **Settings → Appearance → Themes** and select **obsidian-vitela**.
+2. Copy the folder into `<vault>/.obsidian/themes/`. The containing folder name does not matter, Obsidian discovers themes by locating `manifest.json` files.
+3. Open **Settings -> Appearance -> Themes** and select **Vitela**.
 
 ## Using with Obsidian Publish
 
