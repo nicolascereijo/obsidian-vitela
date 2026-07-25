@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.1.3] - 2026-07-25
+
+- Fixed `authorUrl` in `manifest.json` pointing to an Obsidian-owned
+  domain instead of the author's own page.
+- Removed the unsupported `description` field from `manifest.json`
+  (themes don't use it, only plugins do).
+
 ## [1.1.2] - 2026-07-22
 
 - Renamed the theme's display name from `obsidian-vitela` to `Vitela`
