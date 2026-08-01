@@ -170,6 +170,132 @@ body.theme-dark {
 }
 
 /* │
+   │ Two-column callout.
+   └───────────────────────────────────────────────────────────────────────
+   │ '[!columns]' lays its content out in two newspaper-style columns.
+     The callout's own background, border, padding and title are removed
+     so it reads as plain text instead of an admonition box. Paragraphs
+     break freely across the column boundary, like a real newspaper. The
+     first child gets its top margin zeroed so both columns start at the
+     same height, since a margin only pushes down the fragment where a
+     paragraph begins, never its continuation in the next column.
+     'text-align' and 'hyphens' are set directly on the paragraphs rather
+     than left to inherit, because Live Preview renders this callout
+     outside '.markdown-preview-view', which is where the theme's usual
+     justify rule lives. Headings, quotes, code blocks, tables, images and
+     list items get 'break-inside' set to 'avoid' so a single one doesn't
+     get split apart. Falls back to one column under 600px, where two
+     justified columns would be too narrow to read comfortably. */
+.callout[data-callout="columns"] {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.callout[data-callout="columns"] .callout-title {
+  display: none;
+}
+
+.callout[data-callout="columns"] .callout-content {
+  column-count: 2;
+  column-gap: 2em;
+  column-rule: 1px solid var(--background-modifier-border);
+}
+
+.callout[data-callout="columns"] .callout-content > :first-child {
+  margin-top: 0;
+}
+
+.callout[data-callout="columns"] .callout-content p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.callout[data-callout="columns"] .callout-content :is(h1, h2, h3, h4, h5, h6, blockquote, pre, table, img, li) {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+}
+
+@media (max-width: 600px) {
+  .callout[data-callout="columns"] .callout-content {
+    column-count: 1;
+  }
+}
+
+/* │
+   │ Epigraph callout.
+   └───────────────────────────────────────────────────────────────────────
+   │ '[!epigraph]' sets a short quote apart from the body text, styled
+     like a pull quote instead of an admonition. Background, border,
+     padding and title are removed, the same way as '[!columns]'. A thin
+     rule above and below marks it as a quote without needing quotation
+     marks. The first and last child get their margin zeroed so that rule
+     sits flush against the text instead of against leftover paragraph
+     spacing. */
+.callout[data-callout="epigraph"] {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.callout[data-callout="epigraph"] .callout-title {
+  display: none;
+}
+
+.callout[data-callout="epigraph"] .callout-content {
+  border-top: 1px solid var(--background-modifier-border);
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding: 1.5em 0;
+}
+
+.callout[data-callout="epigraph"] .callout-content > :first-child {
+  margin-top: 0;
+}
+
+.callout[data-callout="epigraph"] .callout-content > :last-child {
+  margin-bottom: 0;
+}
+
+.callout[data-callout="epigraph"] .callout-content p {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 1.3em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* │
+   │ Verse callout.
+   └───────────────────────────────────────────────────────────────────────
+   │ '[!verse]' is for poetry, left aligned and unhyphenated instead of
+     justified like the rest of the body text, matching the '[!note]'
+     override above. Background, border, padding and title are removed,
+     the same way as '[!columns]'. Line breaks come from the author
+     ending each line with a hard break in the source, same as anywhere
+     else in Obsidian. This block only stops them from being justified
+     away. */
+.callout[data-callout="verse"] {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.callout[data-callout="verse"] .callout-title {
+  display: none;
+}
+
+.callout[data-callout="verse"] .callout-content p {
+  font-family: "Lora", serif;
+  line-height: 1.9;
+  text-align: left;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+}
+
+/* │
    │ Tables.
    └───────────────────────────────────────────────────────────────────────
    │ Subtle accent tint instead of Obsidian's plain grey borders.

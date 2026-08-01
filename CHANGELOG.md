@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+- Polilla, devourer of margins, scourge of serifs, terror of character spacing, gnawer of paragraphs, eternal enemy of the justified line.
+
+## [1.2.0] - 2026-08-01
+
+- Added three custom callouts, styled with layout only and no admonition
+  box. `[!columns]` for two newspaper-style columns, `[!epigraph]` for a
+  centered pull quote and `[!verse]` for poetry that keeps the author's
+  own line breaks instead of being justified.
+
 ## [1.1.6] - 2026-07-25
 
 - Updated `screenshots/hero.png` to the final cover image.
@@ -105,7 +114,8 @@ Initial release.
   documentation.
 - Theme screenshots.
 
-[Unreleased]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.6...HEAD
+[Unreleased]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.2.0...HEAD
+[1.2.0]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.6...1.2.0
 [1.1.6]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.5...1.1.6
 [1.1.5]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.4...1.1.5
 [1.1.4]: https://github.com/nicolascereijo/obsidian-vitela/compare/1.1.3...1.1.4

@@ -35,6 +35,22 @@ Rather than exposing countless configuration options, Vitela focuses on providin
 
 <img src="screenshots/mobile-1.jpeg" width="32%" alt="Mobile view 1"> <img src="screenshots/mobile-2.jpeg" width="32%" alt="Mobile view 2"> <img src="screenshots/mobile-3.jpeg" width="32%" alt="Mobile view 3">
 
+## Custom callouts
+
+Vitela adds three callouts that reuse Obsidian's `[!type]` syntax purely for layout, with the icon, color and admonition box stripped out, styled to match the rest of the theme instead.
+
+**`[!columns]`** lays a block's content out in two newspaper-style columns.
+
+![Columns callout example](screenshots/columns.png)
+
+**`[!epigraph]`** sets a short quote apart from the body text, centered and in EB Garamond italic, like a pull quote instead of a warning.
+
+![Epigraph callout example](screenshots/epigraph.png)
+
+**`[!verse]`** keeps a poem's own line breaks and drops the justification, instead of folding it into the rest of the justified body text.
+
+![Verse callout example](screenshots/verse.png)
+
 ## Installation
 
 1. Open **Settings -> Appearance -> Themes -> Browse**.
